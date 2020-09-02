@@ -1,0 +1,30 @@
+{
+	"name": "Weather-App",
+	"version": "1.0.0",
+	"description": "The best and the most accurate weather forecasting app in both microverse and macroverse.",
+	"private": true,
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"build": "webpack"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/SafaErden/Weather-App.git"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/SafaErden/Weather-App/issues"
+	},
+	"homepage": "https://github.com/SafaErden/Weather-App#readme",
+	"devDependencies": {
+		"css-loader": "^4.2.2",
+		"style-loader": "^1.2.1",
+		"webpack": "^4.44.1",
+		"webpack-cli": "^3.3.12"
+	},
+	"dependencies": {
+		"lodash": "^4.17.20"
+	}
+}
