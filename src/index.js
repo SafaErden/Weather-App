@@ -6,7 +6,7 @@ function component() {
 
 	// Lodash, currently included via a script, is required for this line to work
 	element.innerHTML = _.join([ 'You are', 'too hot ;)' ], ' ');
-	element.classList.add('hello');
+	element.classList.add('hello', 'h1');
 
 	return element;
 }
