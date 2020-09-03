@@ -1,10 +1,13 @@
+let celcius = true;
+const toggleButton = document.querySelector('.toggler');
+
 function populateContent(params) {
 	Promise.resolve(params).then(function(value) {
 		const mainHeader = document.getElementById('mainHeader');
-		const mainDegree = document.getElementById('mainDegree');
 		const mainInfo = document.getElementById('mainInfo');
 		mainHeader.innerText = value['name'];
-		mainDegree.innerText = value['main']['temp'] + ' Celcius';
+		populateDegree(value['main']['temp']);
+
 		mainInfo.innerText =
 			value['weather'][0]['description'].charAt(0).toUpperCase() + value['weather'][0]['description'].slice(1);
 
@@ -36,6 +39,27 @@ function populateContent(params) {
 			default:
 				mainIcon.className = '';
 				mainIcon.classList.add('fas', 'fa-cloud-sun', 'text-warning', 'display-1');
+		}
+	});
+}
+
+function populateDegree(val) {
+	toggleButton.classList.remove('d-none');
+	const mainDegree = document.getElementById('mainDegree');
+	if (celcius) {
+		mainDegree.innerText = Math.floor(val) + ' Celcius';
+	} else {
+		mainDegree.innerText = Math.floor(val * 9 / 5) + 32 + ' Fahrenheit';
+	}
+	toggleButton.addEventListener('click', () => {
+		if (celcius) {
+			mainDegree.innerText = Math.floor(val * 9 / 5) + 32 + ' Fahrenheit';
+			celcius = false;
+			toggleButton.innerHTML = '&#8451;';
+		} else {
+			mainDegree.innerText = Math.floor(val) + ' Celcius';
+			celcius = true;
+			toggleButton.innerHTML = '&#8457;';
 		}
 	});
 }

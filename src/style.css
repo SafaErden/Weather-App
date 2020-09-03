@@ -8,3 +8,10 @@ body {
 	background-color: white;
 	opacity: 0.6;
 }
+
+.toggler {
+	width: 60px;
+	height: 60px;
+	margin-right: auto;
+	margin-left: auto;
+}
