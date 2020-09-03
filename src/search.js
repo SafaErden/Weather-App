@@ -1,19 +1,42 @@
 import getCities from './cities';
+import populateContent from './content';
 
-const search = document.getElementsByTagName('input')[0];
-const results = document.querySelector('.list-unstyled');
-search.addEventListener('input', async () => {
-	let searchResult = await getCities(search.value);
-	console.log(searchResult);
+function resetResults(listWrapper, results) {
+	listWrapper.innerHTML = '';
+	results.innerHTML = '';
+}
 
-	searchResult.forEach((item) => {
-		console.log('safa');
-		const result = document.createElement('li');
-		result.classList.add('border', 'p-2', 'm-0');
-		result.innerText = item;
-		results.appendChild(result);
+function listenResults() {
+	const results = document.querySelectorAll('.searchItems');
+	results.forEach((item) => {
+		item.addEventListener('click', () => {
+			const finalResult = getLocations(item.innerText);
+			populateContent(finalResult);
+		});
 	});
-});
+}
+
+async function manageSeacrh() {
+	const listWrapper = document.querySelector('.listWrapper');
+
+	const results = document.createElement('ul');
+	results.classList.add('list-unstyled', 'p-0', 'm-0');
+
+	const search = document.getElementsByTagName('input')[0];
+	search.addEventListener('input', async () => {
+		let searchResult = await getCities(search.value);
+		resetResults(listWrapper, results);
+		searchResult.forEach((item) => {
+			const result = document.createElement('li');
+			result.classList.add('border', 'p-2', 'm-0', 'searchItems');
+			result.innerText = item;
+			results.appendChild(result);
+		});
+		if (listWrapper.appendChild(results)) {
+			listenResults();
+		}
+	});
+}
 
 async function getLocations(value) {
 	const response = await fetch(
@@ -23,3 +46,5 @@ async function getLocations(value) {
 	const result = await response.json();
 	return result;
 }
+
+export { manageSeacrh, listenResults };
