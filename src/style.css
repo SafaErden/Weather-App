@@ -1,3 +1,10 @@
-.hello {
-	color: red;
+body {
+	min-height: 100%;
+	background-image: url('./images/mainBg.jpg');
+	background-size: 100%;
+}
+
+.container {
+	background-color: white;
+	opacity: 0.6;
 }

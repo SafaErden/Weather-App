@@ -3,45 +3,45 @@
   <head>
     <title>The Weather App</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
   </head>
-  <body class="bg-dark">
-    <div class="container p-5">
-      <div class="row mb-2">
-        <div class="col-10 p-0 pr-2"><input type="text" class=" w-100 h-100" placeholder="Type a location to search"></div>
-        <div class="col-2 p-0"><button type="submit" class="h-100 w-100 border-0 bg-secondary text-white">Search</button></div>
-      </div>
-      <div class="row my-1 P-0">
-        <div class="col-12  text-white position-relative listWrapper">
-        
+  <body>
+    <div class="d-flex align-items-center justify-content-center vh-100 w-100">
+      <div class="container p-5">
+        <div class="row mb-2">
+          <div class="col-12 p-0"><input type="text" class=" w-100 h-100 p-2 text-dark" placeholder="Type a location to search"></div>
+  
         </div>
-      </div>
-      <div class="row my-1">
-        <div class="col border text-white text-center py-3">
-          <h1 id="mainHeader"></h1>
-          <h1 id="mainDegree"></h1>
-          <h1 id="mainGif"></h1>
-          <h1 id="mainInfo"></h1>
-          <h1 id="Date"></h1>
+        <div class="row my-1 P-0">
+          <div class="col-12  text-dark position-relative listWrapper">
+          
+          </div>
         </div>
-      </div>
-     
-      <div class="row my-1">
-        <div class="col-12 col-md-6 col-lg-3  text white p-0 pr-md-1 py-1 text-white text-center">
-          <div class="border w-100 py-3">day</div>
+        <div class="row my-1">
+          <div class="col border border-dark text-dark text-center py-3">
+            <i class="" id="mainIcon"></i>
+            <h1 class ="display-2" id="mainHeader"></h1>
+            <h1 class ="display-4 font-weight-bold"id="mainDegree"></h1>
+            <h1 class ="display-3"id="mainInfo"></h1>
+          </div>
         </div>
-        <div class="col-12 col-md-6 col-lg-3  text white p-0 pl-md-1 pr-lg-2 py-1 text-white text-center">
-          <div class="border w-100 py-3">day</div>
-        </div>
-        <div class="col-12 col-md-6 col-lg-3  text white p-0 pr-md-1 py-1 text-white text-center">
-          <div class="border w-100 py-3">day</div>
-        </div>
-        <div class="col-12 col-md-6 col-lg-3  text white p-0 pl-md-1 py-1 text-white text-center">
-          <div class="border w-100 py-3">day</div>
+       
+        <div class="row my-1">
+          <div class="col-12 col-md-6 col-lg-3  text-dark p-0 pr-md-1 py-1  text-center">
+            <div class="border border-dark w-100 py-3 display-4"><i class="fas fa-wind"></i><div class="display-5" id="wind"></div></div>
+          </div>
+          <div class="col-12 col-md-6 col-lg-3 p-0 pl-md-1 pr-lg-2 py-1 text-dark text-center">
+            <div class="border border-dark w-100 py-3 display-4"><i class="fas fa-tint"></i><div class="display-5" id="humid"></div></div>
+          </div>
+          <div class="col-12 col-md-6 col-lg-3 p-0 pr-md-1 py-1 text-dark text-center">
+            <div class="border border-dark w-100 py-3 display-4"><i class="fas fa-cloud"></i><div class="display-5" id="cloud"></div></div>
+          </div>
+          <div class="col-12 col-md-6 col-lg-3 p-0 pl-md-1 py-1 text-dark text-center">
+            <div class="border border-dark w-100 py-3 display-4"><i class="fab fa-cloudscale"></i><div class="display-5" id="pressure"></div></div>
+          </div>
         </div>
       </div>
     </div>
-
-
 
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>

@@ -25,6 +25,8 @@
 		"webpack-cli": "^3.3.12"
 	},
 	"dependencies": {
-		"lodash": "^4.17.20"
+		"file-loader": "^6.1.0",
+		"lodash": "^4.17.20",
+		"url-loader": "^4.1.0"
 	}
 }
