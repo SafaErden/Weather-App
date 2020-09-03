@@ -1,5 +1,7 @@
 import _ from 'lodash';
 import './style.css';
+import './search';
+import './cities';
 
 function component() {
 	const element = document.createElement('div');
