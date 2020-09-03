@@ -1,17 +1,17 @@
 body {
-	min-height: 100%;
-	background-image: url('./images/mainBg.jpg');
-	background-size: 100%;
+  min-height: 100%;
+  background-image: url('./images/mainBg.jpg');
+  background-size: 100%;
 }
 
 .container {
-	background-color: white;
-	opacity: 0.7;
+  background-color: white;
+  opacity: 0.7;
 }
 
 .toggler {
-	width: 60px;
-	height: 60px;
-	margin-right: auto;
-	margin-left: auto;
+  width: 60px;
+  height: 60px;
+  margin-right: auto;
+  margin-left: auto;
 }
