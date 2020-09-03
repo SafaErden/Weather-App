@@ -27,18 +27,22 @@ function populateContent(params) {
 			case 'Clouds':
 				mainIcon.className = '';
 				mainIcon.classList.add('fas', 'fa-cloud', 'text-gray', 'display-1');
+				document.body.style.backgroundImage = "url('./images/cloud.jpg')";
 				break;
 			case 'Rain':
 				mainIcon.className = '';
 				mainIcon.classList.add('fas', 'fa-cloud-rain', 'text-primary', 'display-1');
+				document.body.style.backgroundImage = "url('./images/rain.jpg')";
 				break;
 			case 'Clear':
 				mainIcon.className = '';
 				mainIcon.classList.add('fas', 'fa-sun', 'text-warning', 'display-1');
+				document.body.style.backgroundImage = "url('./images/clear.jpg')";
 				break;
 			default:
 				mainIcon.className = '';
 				mainIcon.classList.add('fas', 'fa-cloud-sun', 'text-warning', 'display-1');
+				document.body.style.backgroundImage = "url('./images/wind.jpg')";
 		}
 	});
 }
