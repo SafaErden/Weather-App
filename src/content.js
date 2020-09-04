@@ -12,7 +12,6 @@ function populateDegree(val) {
 
 	toggleButton.addEventListener('click', (e) => {
 		e.stopImmediatePropagation();
-		console.log(mainDegree);
 		mainDegree = document.getElementById('mainDegree');
 		if (celcius) {
 			mainDegree.innerText = `${Math.floor(val * 9 / 5) + 32} Fahrenheit`; /* eslint-disable-line */
