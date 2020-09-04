@@ -10,7 +10,7 @@ A simple weather application which you can search for a location and get that lo
     This project is a part of the Microverse curriculum and is done as an solo exercise in the Javascript section.
     <br />
     <br />
-    <a href="https://safaerden.github.io/Restaurant-Page/">View Demo</a>
+    <a href="https://safaerden.github.io/Weather-App/">View Demo</a>
     ·
     <a href="https://github.com/SafaErden/Weather-App/issues">Report Bug</a>
   </p>
