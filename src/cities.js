@@ -14,7 +14,7 @@ async function filterCities(json, param) {
 
 async function getCities(param) {
 	try {
-		const response = await fetch('../src/city.list.json');
+		const response = await fetch('./city.list.json');
 		const cities = await response.json();
 		const filterCity = await filterCities(cities, param);
 		return filterCity;
