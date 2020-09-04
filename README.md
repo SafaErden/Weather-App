@@ -1,5 +1,5 @@
 # Project: Weather App
-A simple weather application which you can search for a location and get that location's weather informations. This project is built with HTML, CSS & Javascript. Also, openweatherAPI is used to fetch the wearther information for selected location. 
+A simple weather application which you can search for a location and get that location's weather informations. This project is built with HTML, CSS & Javascript. Also, openweatherAPI is used to fetch the weather information for the selected location. 
 
 <br />
 <p align="center">
