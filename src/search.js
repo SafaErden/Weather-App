@@ -6,7 +6,7 @@ const results = document.createElement('ul');
 
 async function getLocations(value) {
 	const response = await fetch(
-		`http://api.openweathermap.org/data/2.5/weather?q=${value}&APPID=a62a939fdc5a7df5164d021d0e94ce6b&units=metric`,
+		`https://api.openweathermap.org/data/2.5/weather?q=${value}&APPID=a62a939fdc5a7df5164d021d0e94ce6b&units=metric`,
 		{ mode: 'cors' }
 	);
 	const result = await response.json();
